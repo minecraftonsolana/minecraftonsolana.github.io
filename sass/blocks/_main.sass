@@ -1,0 +1,103 @@
+@keyframes size-change
+  0%
+    transform: scale(1) rotate(-20deg)
+
+  50%
+    transform: scale(0.7) rotate(-20deg)
+
+  100%
+    transform: scale(1) rotate(-20deg)
+
+
+.main
+  min-height: 100vh
+
+  &__corner
+    &-text
+      position: absolute
+      left: 0
+      top: 0
+      &-2
+        height: 50px
+        overflow: hidden
+        margin-top: auto
+        span
+          text-align: right
+          width: 100%
+          display: block
+          color: #E7E7E7
+          text-shadow: 0px 4px 4px rgba(56, 56, 56, 0.75)
+          font-family: Minecraftia, serif
+          font-size: 36px
+          font-style: normal
+          font-weight: 400
+          line-height: normal
+          //text-align: right
+          //color: #FFF
+          //-webkit-text-stroke-width: 1px
+          //-webkit-text-stroke-color: #000
+          //font-family: Minecraftia, serif
+          //font-size: 36px
+          //font-style: normal
+          //font-weight: 400
+          //line-height: normal
+          //display: block
+      &-1
+        span
+          color: #505050
+          font-family: Minecraftia, serif
+          font-size: 32px
+          font-style: normal
+          font-weight: 400
+          line-height: normal
+  &__buttons
+    display: flex
+    flex-direction: column
+    gap: 21px
+  &__button
+    background-image: url("../img/button_default.png")
+    background-size: cover
+    width: 800px
+    height: 80px
+    display: flex
+    justify-content: center
+    text-decoration: none
+    align-items: center
+    padding-top: 16px
+    &:hover
+      span
+        color: #FFFFA0
+      background-image: url("../img/button_hover.png")
+    span
+      color: #E0E0E0
+      text-align: center
+      text-shadow: 3px 4px 0px #383838
+      font-family: Minecraftia, serif
+      font-size: 36px
+      font-style: normal
+      font-weight: 400
+      line-height: normal
+
+  &__logo
+    &-container
+      position: relative
+      span
+        display: block
+        color: #FFFF00
+        text-align: center
+        text-shadow: 3px 4px 0px #383838
+        font-family: Minecraftia, serif
+        font-size: 48px
+        font-style: normal
+        font-weight: 400
+        line-height: normal
+        position: absolute
+        right: -192px
+        bottom: 14px
+        animation: size-change 2s infinite ease-in-out
+  &__container
+    padding-top: 94px
+    display: flex
+    flex-direction: column
+    gap: 145px
+    align-items: center

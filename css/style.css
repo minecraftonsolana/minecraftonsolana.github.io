@@ -1,0 +1,470 @@
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+* {
+  user-select: none;
+}
+
+section {
+  display: none;
+  flex-direction: column;
+}
+
+.section__focused {
+  display: flex;
+}
+
+body {
+  background-image: url("../img/dirt_bg.png");
+}
+
+html, body {
+  width: 100%;
+  min-width: 1600px;
+  height: auto;
+}
+
+@keyframes size-change {
+  0% {
+    transform: scale(1) rotate(-20deg);
+  }
+  50% {
+    transform: scale(0.7) rotate(-20deg);
+  }
+  100% {
+    transform: scale(1) rotate(-20deg);
+  }
+}
+.main {
+  min-height: 100vh;
+}
+.main__corner-text {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.main__corner-text-2 {
+  height: 50px;
+  overflow: hidden;
+  margin-top: auto;
+}
+.main__corner-text-2 span {
+  text-align: right;
+  width: 100%;
+  display: block;
+  color: #E7E7E7;
+  text-shadow: 0px 4px 4px rgba(56, 56, 56, 0.75);
+  font-family: Minecraftia, serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.main__corner-text-1 span {
+  color: #505050;
+  font-family: Minecraftia, serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.main__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+}
+.main__button {
+  background-image: url("../img/button_default.png");
+  background-size: cover;
+  width: 800px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+  padding-top: 16px;
+}
+.main__button:hover {
+  background-image: url("../img/button_hover.png");
+}
+.main__button:hover span {
+  color: #FFFFA0;
+}
+.main__button span {
+  color: #E0E0E0;
+  text-align: center;
+  text-shadow: 3px 4px 0px #383838;
+  font-family: Minecraftia, serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.main__logo-container {
+  position: relative;
+}
+.main__logo-container span {
+  display: block;
+  color: #FFFF00;
+  text-align: center;
+  text-shadow: 3px 4px 0px #383838;
+  font-family: Minecraftia, serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: absolute;
+  right: -192px;
+  bottom: 14px;
+  animation: size-change 2s infinite ease-in-out;
+}
+.main__container {
+  padding-top: 94px;
+  display: flex;
+  flex-direction: column;
+  gap: 145px;
+  align-items: center;
+}
+
+.server__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  width: 1378px;
+  padding-top: 53px;
+}
+.server__buttons-row {
+  display: flex;
+  gap: 18px;
+}
+.server__buttons-row:first-child .server__button {
+  width: 443px;
+}
+.server__buttons-row:first-child .server__button:hover {
+  background-image: url("../img/top_button-hover.png");
+}
+.server__buttons-row:first-child .server__button:hover span {
+  color: #FFFFA0;
+}
+.server__buttons-row:first-child .server__button-disabled {
+  pointer-events: none;
+  background-image: url("../img/top_disabled.png");
+}
+.server__buttons-row:first-child .server__button-disabled span {
+  color: #A0A0A0;
+}
+.server__buttons-row:last-child .server__button {
+  width: 312px;
+  background-image: url("../img/bottom_button.png");
+}
+.server__buttons-row:last-child .server__button:hover {
+  background-image: url("../img/bottom_button-hover.png");
+}
+.server__buttons-row:last-child .server__button:hover span {
+  color: #FFFFA0;
+}
+.server__buttons-row:last-child .server__button-disabled {
+  pointer-events: none;
+  background-image: url("../img/bottom_disabled.png");
+}
+.server__buttons-row:last-child .server__button-disabled span {
+  color: #A0A0A0;
+}
+.server__button {
+  flex: 1;
+  background-image: url("../img/top_button.png");
+  height: 88px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+}
+.server__button span {
+  color: #E0E0E0;
+  text-align: center;
+  text-shadow: 3px 4px 0px #383838;
+  font-family: Minecraftia, serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.server__button-visual {
+  pointer-events: none;
+  background-image: url("../img/top_disabled.png");
+}
+.server__button-visual span {
+  color: #A0A0A0;
+}
+.server__container {
+  padding-top: 75px;
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.server__item {
+  display: flex;
+  justify-content: space-between;
+  width: 1350px;
+  padding-right: 4px;
+}
+.server__item-motd {
+  display: flex;
+  height: 90px;
+  flex-direction: column;
+  margin-top: -28px;
+}
+.server__item-input {
+  display: none;
+}
+.server__item-input:checked + label {
+  outline: 4px solid #808080;
+  background: #000;
+}
+.server__item:focus {
+  background: red;
+}
+.server__item-online {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.server__item-online-ping {
+  padding-top: 7px;
+}
+.server__item-online-counter span {
+  color: #AAA;
+  text-align: center;
+  font-family: Minecraftia, serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.server__item-header {
+  display: flex;
+  gap: 10px;
+}
+.server__item-name {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.server__item-name span {
+  color: #E0E0E0;
+  font-family: Minecraftia, serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  height: 40px;
+  display: block;
+}
+.server__menu {
+  padding-top: 75px;
+  background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.6) 2%, rgba(0, 0, 0, 0.45) 4%, rgba(0, 0, 0, 0.42) 50%, rgba(0, 0, 0, 0.45) 96%, rgba(0, 0, 0, 0.6) 98%, #000 100%);
+  width: 100%;
+  height: 56vh;
+  position: relative;
+  top: -16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.server__menu-title {
+  color: #E0E0E0;
+  text-align: center;
+  text-shadow: 3px 4px 0px #383838;
+  font-family: Minecraftia, serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.guide__container {
+  display: flex;
+  flex-direction: column;
+  gap: 230px;
+  align-items: center;
+  padding-top: 23vh;
+}
+.guide__text {
+  display: flex;
+  flex-direction: column;
+  gap: 140px;
+}
+.guide__description {
+  width: 1435px;
+  color: #E0E0E0;
+  text-align: center;
+  text-shadow: 4px 4px 0px #383838;
+  font-family: Minecraftia, serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 50px;
+}
+.guide__title {
+  color: #AAA;
+  text-align: center;
+  text-shadow: 0px 4px 4px #2A2A2A;
+  font-family: Minecraftia, serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.guide__button {
+  background-image: url("../img/button_default.png");
+  background-size: cover;
+  width: 800px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+  padding-top: 16px;
+}
+.guide__button:hover {
+  background-image: url("../img/button_hover.png");
+}
+.guide__button:hover span {
+  color: #FFFFA0;
+}
+.guide__button span {
+  color: #E0E0E0;
+  text-align: center;
+  text-shadow: 3px 4px 0px #383838;
+  font-family: Minecraftia, serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media (max-width: 1300px) {
+  html, body {
+    width: 100%;
+    min-width: 100%;
+    height: auto;
+  }
+  section:not(.mobile) {
+    display: none;
+  }
+  .mobile {
+    display: flex;
+  }
+  .mobile__main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .mobile__corner {
+    text-align: right;
+    overflow: hidden;
+  }
+  .mobile__corner br {
+    display: none;
+  }
+  .mobile__corner span {
+    width: 100%;
+    display: block;
+    color: #E7E7E7;
+    text-shadow: 0px 4px 4px rgba(56, 56, 56, 0.75);
+    font-family: Minecraftia, serif;
+    font-size: 16.66px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .mobile__container {
+    width: 100%;
+    padding-top: 48px;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 47px;
+  }
+  .mobile__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 38px;
+  }
+  .mobile__button {
+    width: 155px;
+    height: 155px;
+    background-size: cover;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+  }
+  .mobile__button span {
+    color: #E7E7E7;
+    text-shadow: 0px 4px 4px rgba(56, 56, 56, 0.75);
+    font-family: Minecraftia, serif;
+    font-size: 13.88px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .mobile__button:nth-child(1) {
+    background-image: url("../img/mobile_button-1.png");
+  }
+  .mobile__button:nth-child(1):hover {
+    background-image: url("../img/mobile_button-1-pressed.png");
+  }
+  .mobile__button:nth-child(2) {
+    background-image: url("../img/mobile_button-2.png");
+  }
+  .mobile__button:nth-child(2):hover {
+    background-image: url("../img/mobile_button-2-pressed.png");
+  }
+  .mobile__button:nth-child(3) {
+    background-image: url("../img/mobile_button-3.png");
+  }
+  .mobile__button:nth-child(3):hover {
+    background-image: url("../img/mobile_button-3-pressed.png");
+  }
+  .mobile__logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+  .mobile__logo-container img {
+    width: 277px;
+  }
+  .mobile__logo-container span {
+    color: #E7E7E7;
+    text-shadow: 0px 4px 4px rgba(56, 56, 56, 0.75);
+    font-family: Minecraftia, serif;
+    font-size: 16.6px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+@media (max-width: 600px) {
+  .mobile__buttons {
+    flex-direction: column;
+  }
+  .mobile__corner {
+    text-align: center;
+    overflow: hidden;
+  }
+  .mobile__corner br {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
