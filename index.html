@@ -44,10 +44,10 @@
                         <div class="server__item-header">
                             <img class="server__item-img" src="img/server_avatar.png" alt="Preview">
                             <div class="server__item-name">
-                                <span>[Beta]  SolCraft.world  -  b1.7.3</span>
+                                <span>[Beta]  SOLCraft.world  -  b1.7.3</span>
                                 <div class="server__item-motd">
-                                    <span>Sample  Message  of  the  Day  Line  1</span>
-                                    <span>Sample  Message  of  the  Day  Line  2</span>
+                                    <span>Still WIP and janky</span>
+                                    <span>(but you can already play it!)</span>
                                 </div>
                             </div>
                         </div>
@@ -67,7 +67,7 @@
                         <div class="server__item-header">
                             <img class="server__item-img" src="img/server_avatar.png" alt="Preview">
                             <div class="server__item-name">
-                                <span>[New]  SolCraft.world  -  1.20</span>
+                                <span>[New]  SOLCraft.world  -  1.20</span>
                                 <div class="server__item-motd">
                                     <span>Work in progress!</span>
                                     <span>server soon</span>
@@ -121,11 +121,11 @@
                     How to connect
                 </h4>
                 <p class="guide__description">
-                    1. Download  Minecraft  b1.7.3/1.21  <br/>
+                    1. Download  Minecraft  b1.7.3/1.20.0  <br/>
                     (Either  use  PolyMC  or  the  official launcher) <br/><br/>
                     2. Connect  to  the  server  of  your  choosing: <br/><br/>
-                    b1.7.3  -  420.69.777.32 <br/>
-                    v4.2.0  -  420.69.777.32 <br/><br/>
+                    b1.7.3  -  beta.solcraft.world  <br/>
+                    v1.20.0  -  new.solcraft.world <br/><br/>
                     3. Go  play  Minecraft,  anon!
                 </p>
             </div>
@@ -163,7 +163,7 @@
         const server1 = document.getElementById("s1");
         const server2 = document.getElementById("s2");
         // First server
-        MinecraftAPI.getServerStatus('mc.hixe.net', {
+        MinecraftAPI.getServerStatus('beta.solcraft.world', {
             port: 25565
         }, function (err, status) {
             if (err) {
@@ -178,8 +178,8 @@
             server1.querySelector(".server__item-online-counter span").innerText = `${status.players.now}/${status.players.max}`;
         });
 
-        // First server
-        MinecraftAPI.getServerStatus('mc.hypixel.net', {
+        // Second server
+        MinecraftAPI.getServerStatus('new.solcraft.world', {
             port: 25565
         }, function (err, status) {
             if (err) {
